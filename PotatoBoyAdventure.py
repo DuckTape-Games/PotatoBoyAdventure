@@ -263,7 +263,7 @@ def setup_new_game_button():
 
 ### Activates when clicked by the new game button, resets the game to level 1-1 ###
 def new_game(x,y): #x and y are required for on click
-    global world, level, game_over, lives, initial_timer_call, carrot_movement_generation, broccoli_movement_generation, timer_generation
+    global world, level, game_over, lives, initial_timer_call, timer_value
     #Reset game state and logic variables
     lives = 3
     game_over = False
@@ -271,6 +271,7 @@ def new_game(x,y): #x and y are required for on click
         initial_timer_call = True
     #Starts the game back from 1-1 by calling new_world while world is 0
     world = 0
+    timer_value = 5
     new_world()
 
 ### Displays the world and level in the x-x format ###
